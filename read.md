@@ -10,7 +10,8 @@
 10. git status Посмотреть состояние
 11. git add -A Добавить все файлы
 12. git commit -a -m ”start freecodecamp” Создание контрольной точки
-13. git add -A + git commit -a -m ”message” Вводить после внесения всех изменений
+13. git add -A
+    git commit -a -m ”message” Вводить после внесения всех изменений
 14. git log Посмотреть изменения
 15.
 16.
