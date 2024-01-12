@@ -4,40 +4,41 @@ let gold = 50;
 let currentWeapon = 0;
 let fighting;
 let monsterHealth;
-let inventory = ["stick", "dagger", "sword"];
+let inventory = ["stick"];
 
-const button1 = document.querySelector("#button1");
+const button1 = document.querySelector('#button1');
 const button2 = document.querySelector("#button2");
 const button3 = document.querySelector("#button3");
-
 const text = document.querySelector("#text");
 const xpText = document.querySelector("#xpText");
 const healthText = document.querySelector("#healthText");
 const goldText = document.querySelector("#goldText");
 const monsterStats = document.querySelector("#monsterStats");
 const monsterName = document.querySelector("#monsterName");
-
 const monsterHealthText = document.querySelector("#monsterHealth");
-
 const weapons = [
-  {
-    name: 'stick',
-    power: 5
-  },
-  {
-    name: 'dagger',
-    power: 30
-  },
-  {
-    name: 'claw hammer',
-    power: 50
-  },
-  {
-    name: 'sword',
-    power: 100
-  }
+  { name: 'stick', power: 5 },
+  { name: 'dagger', power: 30 },
+  { name: 'claw hammer', power: 50 },
+  { name: 'sword', power: 100 }
 ];
-
+const monsters = [
+  {
+    name: "slime",
+    level: 2,
+    health: 15
+  },
+  {
+    name: "fanged beast",
+    level: 8,
+    health: 60
+  },
+  {
+    name: "dragon",
+    level: 20,
+    health: 300
+  }
+]
 const locations = [
   {
     name: "town square",
@@ -56,7 +57,7 @@ const locations = [
     "button text": ["Fight slime", "Fight fanged beast", "Go to town square"],
     "button functions": [fightSlime, fightBeast, goTown],
     text: "You enter the cave. You see some monsters."
-  },
+  }
 ];
 
 // initialize buttons
@@ -77,14 +78,13 @@ function update(location) {
 function goTown() {
   update(locations[0]);
 }
+
 function goStore() {
   update(locations[1]);
 }
+
 function goCave() {
   update(locations[2]);
-}
-function fightDragon() {
-  console.log("Fighting dragon.");
 }
 
 function buyHealth() {
@@ -131,8 +131,27 @@ function sellWeapon() {
 }
 
 function fightSlime() {
+  fighting = 0;
+  goFight();
+}
+
+function fightBeast() {
+  fighting = 1;
+  goFight();
+}
+
+function fightDragon() {
+  fighting = 2;
+  goFight();
+}
+
+function goFight() {
 
 }
-function fightBeast() {
+
+function attack() {
+
+}
+function dodge() {
 
 }
